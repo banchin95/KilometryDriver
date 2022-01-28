@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen>
               const SizedBox(height: 10,),
 
               const Text(
-                "Login Километры",
+                "Вход в аккаунт",
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.grey,
