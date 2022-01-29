@@ -4,21 +4,19 @@ import 'package:kilometry_driver/tabPages/home_tab.dart';
 import 'package:kilometry_driver/tabPages/profile_tab.dart';
 import 'package:kilometry_driver/tabPages/ratings_tab.dart';
 
-class MainScreen extends StatefulWidget
-{
+class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin
-{
+class _MainScreenState extends State<MainScreen>
+    with SingleTickerProviderStateMixin {
   TabController? tabController;
   int selectedIndex = 0;
 
-  onItemClicked(int index)
-  {
+  onItemClicked(int index) {
     setState(() {
       selectedIndex = index;
       tabController!.index = selectedIndex;
@@ -45,29 +43,24 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
           ProfileTabPage(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar (
+      bottomNavigationBar: BottomNavigationBar(
         items: const [
-
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Главная",
+            label: "Маршруты",
           ),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.credit_card),
             label: "Оплата",
           ),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
             label: "Рейтинг",
           ),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "Профиль",
           ),
-
         ],
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.black54,
